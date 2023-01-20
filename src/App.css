@@ -36,3 +36,525 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* MY CSS */
+
+/*general*/
+
+body {
+  color: #FF6060; 
+  padding: 0 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+text-decoration: none;
+color:#FF6060; 
+cursor: pointer;
+}
+
+/*components*/
+
+
+/*caroussel=====*/
+
+
+.caroussel {
+    
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.caroussel-text-container {
+  background: linear-gradient(4deg, rgba(0,0,0,0.41780462184873945) 0%, rgba(0,0,0,0.24693627450980393) 100%);
+  height: 100%;
+  width: 100%;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  color: white; 
+  border-radius: 20px;
+  font-size: 48px;
+}
+
+
+
+.caroussel.logement {
+    height:415px; 
+    background-image: url(img/Background.png);
+}
+
+/* chevrons */
+.caroussel.logement img {
+  height: 76px;
+  margin: 10px;
+} 
+
+.caroussel.about {
+  height:223px; 
+  background-image: url(img/about.png);
+}
+
+ .caroussel.home {
+  height:223px; 
+  background-image: url(img/IMG.png);
+}
+
+.caroussel.home p {
+  padding: 40px;
+}
+
+
+  /*toogle*/
+
+  .toggle-container {
+    position: relative;
+    background-color: #F6F6F6;
+    border-radius: 20px;
+  }
+  
+  .toggle-content {
+    display: none;
+    padding: 20px; 
+  }
+  
+  .toggle-container i {
+    position: absolute;
+    right: 30px;
+    top: 25px;
+    transition: transform 0.3s;
+  }
+  
+  .toggle-container i.open {
+    transform: rotate(180deg); 
+  }
+  
+  .toggle-container h2 {
+    cursor: pointer;
+    background-color: #FF6060;
+    color: whitesmoke;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+
+
+/*header*/
+
+header {
+  padding: 40px 0;
+}
+
+.header-container {
+  display: flex; 
+  flex-direction: row;
+  height:68px;
+}
+
+.header-container .logo-container  {
+  width:33%; 
+}
+
+.logo-container {
+display: flex;
+align-items: center;
+
+}
+
+.logo-container img {
+width: 100%;
+max-width: 211px;
+}
+
+.header-container .nav-container {
+  width: 66%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-container nav {
+  display: flex;
+}
+
+.nav-container nav li{
+  text-decoration: none;
+  font-size: 24px;
+  list-style-type: none;
+  display: flex; 
+  flex-direction: row;
+}
+
+
+
+/*_________________________PAGES -_______________________*/
+/*home*/
+
+
+.cards-container {
+  margin-top: 40px; 
+  background: #F6F6F6;
+  border-radius: 20px;
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  align-content: center;
+  gap: 30px;
+  padding: 40px; 
+}
+
+.card {
+  border-radius: 5px;
+  background-color: #FF6060;
+  height: 300px;
+  width: 300px;
+  background-position: center;
+  
+}
+
+/*pour le fond gris transparent*/
+.card-text-container {
+
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(4deg, rgba(0,0,0,0.41780462184873945) 0%, rgba(0,0,0,0.24693627450980393) 43%, rgba(0,0,0,0) 76%);
+}
+
+.card-text {
+  color: whitesmoke; 
+  text-align: left;
+  position: absolute; 
+  height: 30%;
+  width: 50%;
+  bottom: 0px;
+  left: 0px;
+  padding-left: 30px;
+}
+
+
+
+/* page logement */
+
+.info-header-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.left-info, .right-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.right-info {
+  align-items: flex-end;
+  width: 23%;
+}
+
+
+
+.logement-tags {
+  display: flex;
+  gap:20px; 
+}
+
+.logement-tags .tag {
+  background-color: #FF6060;
+  padding: 5px 40px;
+  border-radius: 10px;
+  color: whitesmoke;
+}
+
+.logement-proprio {
+  display: flex;
+  flex-direction: row;
+   justify-content: space-between;
+  align-items: center;
+}
+
+span.proprio-name {
+  text-align: end;
+}
+
+.proprio-img-container {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  background-color:#C4C4C4;
+  margin-left: 20px;
+}
+
+li.equipements {
+list-style-type: none;
+}
+
+ul.equipements {
+padding: 0px;
+}
+
+.rating {
+  display: flex;
+}
+
+.rating i {
+  font-size: 30px;
+  color: #E3E3E3;
+}
+
+.rating i:nth-child(-n+3) {
+  color: #FF6060;
+}
+
+
+.info-main-container {
+  display: flex;
+  gap: 40px;
+}
+
+.info-main-container .left-main, .info-main-container .right-main {
+  width: 50%;
+}
+
+
+
+/*---------ERROR404----------------*/
+
+.error-main-container {
+  height: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  }   
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  height: 90%;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.text-404 {
+  font-size: 300px; 
+  font-weight: 700;
+  margin: 0;
+}
+
+.return-link {
+  text-align: center;
+  }
+
+ .return-link a {
+  color:#FF6060
+ } 
+
+
+ /*ABOUT */
+
+
+.about.main-content {
+margin: 10px 7rem;
+}
+
+
+/*FOOTER*/
+
+footer {
+margin-top: 200px;
+background-color:#0c0c0c;
+height: 200px;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 0 0 1000vmax #0c0c0c;
+clip-path: inset(0 -100vmax);
+
+}
+
+.footer-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+color: whitesmoke; 
+}
+
+
+.footer-container img {
+width: 100px; 
+}
+
+
+
+
+/*******MEDIEQUERIES******/
+
+
+@media screen and ( width < 788px) {
+
+body {
+  padding: 10px;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: initial;
+}
+
+h2 {
+  font-size: medium;
+}
+
+
+header {
+  padding: 10px 0;
+}
+
+footer {
+  margin-top: 50px;
+}
+
+.nav-container nav li ul {
+  text-transform: uppercase;
+  font-size: 16px;
+  padding:10px;
+}
+
+/*componenents*/
+/*toggle*/
+.toggle-container h2 {
+  padding: 10px; 
+  border-radius: 5px;
+}
+
+.toggle-container i {
+  top: 13px;
+}
+
+.toggle-content {
+  padding: 10px;
+}
+
+.toggle-content ul {
+  padding: 0px;
+}
+
+
+/*home mobile*/
+
+.caroussel.home {
+  height: 123px;
+}
+
+.caroussel.home p {
+  font-size: 30px;
+}
+
+.cards-container {
+  margin-top:10px;
+  padding: 15px;
+}
+
+.card {
+  height: 225px; 
+  width: 100%;
+}
+
+
+
+/*about*/
+
+
+.about.main-content {
+  margin:0px;
+}
+
+/*404*/
+
+.text-404 {
+  font-size: 100px;
+}
+
+.error-container {
+  font-size: 20px;
+  font-weight: 400;
+  width: 80%;
+}
+
+.error-main-container {
+    height: 100vw;
+}
+
+
+/*logement mobile*/
+
+.caroussel.logement {
+  height: 245px;
+}
+.caroussel.logement img {
+  height: 36px;
+}
+
+
+.info-header-container {
+  flex-direction: column;
+}
+
+.logement-tags .tag {
+  padding: 5px 32px;
+}
+
+.left-info, .right-info {
+  gap: 10px;
+}
+
+.right-info {
+  margin-top:10px; 
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.rating i {
+  font-size: 15px;
+}
+
+.proprio-img-container {
+  width: 30px;
+  height: 30px;
+}
+
+.info-main-container {
+  flex-direction: column;
+  gap:0; 
+}
+
+.info-main-container .left-main, .info-main-container .right-main {
+  width: 100%;
+}
+
+
+}
