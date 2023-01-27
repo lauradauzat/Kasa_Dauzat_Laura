@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
   createBrowserRouter,
-  RouterProvider, 
+  RouterProvider
 } from "react-router-dom";
+
 //import { BrowserRouter } from "react-router-dom"
 import './index.css';
 //import App from './App';
@@ -14,6 +15,13 @@ import Home from './components/Home';
 import Error from './components/Error';
 import reportWebVitals from './reportWebVitals';
 import About from './components/About';
+//import Header from './components/Header';
+import Footer from './components/Footer';
+
+
+// import logo from './img/LOGO.png'
+
+
 
 const router = createBrowserRouter([
   {
@@ -34,18 +42,30 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <>
+ 
   <React.StrictMode>
-   <RouterProvider router={router} />
+
+
+    <RouterProvider router={router}>
       <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet"
       />
       <script src="https://kit.fontawesome.com/44a9982843.js" crossOrigin="anonymous"></script>
-   {/* <BrowserRouter>
-      <App />
-    </BrowserRouter> */}
+      
+    </RouterProvider>
+
+
+    <Footer />
   </React.StrictMode>
+  
+  </>
+
 );
+
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

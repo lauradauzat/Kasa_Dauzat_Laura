@@ -1,12 +1,14 @@
-import Footer from "./Footer";
-import Header from "./Header";
+import Header from './Header'
+import CardContainer from "./CardContainer"; 
+
 
 function Home () {
     return (
         <>
           <Header />
-          <h1>Coucou</h1>
-          <Footer />
+          <div className="caroussel about"></div>
+          <CardContainer/>
+
         </>
     )
 }

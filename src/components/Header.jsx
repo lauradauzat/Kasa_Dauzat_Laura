@@ -5,25 +5,27 @@ import logo from '../img/LOGO.png'
 function Header() {
   return (
     <header>
-      <div className="header-container">
-        <div className="logo-container">
+    <div className="header-container">
+      <div className="logo-container">
+        <Link to={'/'}>
           <img src={logo} alt="" srcSet="" />
-        </div>
-
-        <div className="nav-container">
-          <nav>
-            <li>
-              <Link to="/">
-                <ul>Accueil</ul>
-              </Link>
-              <Link to="/about">
-                <ul>A propos</ul>
-              </Link>
-            </li>
-          </nav>
-        </div>
+        </Link>
       </div>
-    </header>
+
+      <div className="nav-container">
+        <nav>
+        <ul>
+          <li>
+            <Link to={`/`}>Accueil</Link>
+          </li>
+          <li>
+            <Link to={`/about`}>A Propos</Link>
+          </li>
+        </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
   );
 }
 

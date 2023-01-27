@@ -1,6 +1,19 @@
+import Header from './Header'
+import LogementInfo from './LogementInfo';
+
 function Logement () {
     return (
-        <h1>Logement</h1>
+        <>  
+            <Header />
+            <div className="caroussel logement">
+                <img src="./chevron-left.png" alt="" srcset="" />
+                <img src="./chevron-right.png" alt="" srcset="" />
+            </div>
+
+            <LogementInfo />
+
+
+        </>
     )
 }
 
