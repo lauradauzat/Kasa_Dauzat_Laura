@@ -7,7 +7,7 @@ function About() {
     
     return(
         <>
-        <Header />
+      
         <main>
             <div className="caroussel about" />
             <div className="about main-content">

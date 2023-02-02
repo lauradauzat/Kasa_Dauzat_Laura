@@ -3,7 +3,7 @@ import Header from './Header'
 function Error() {
     return (
       <>
-        <Header />
+   
         <main>
           <div className="error-main-container">
             <div className="error-container">
