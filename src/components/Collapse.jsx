@@ -14,7 +14,7 @@ function Collapse (props) {
       <div className="toggle-container">
         <h2>{title} <FontAwesomeIcon icon={faChevronDown} onClick={handleToggle} className={`${isOpen ? 'open' : ''}`} /></h2>
         <div className="toggle-content" style={{display: isOpen ? 'block' : 'none' }} >
-          <p>{content}</p>
+          {content}
         </div>
       </div>
     );

@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 import Collapse from './Collapse';
 
 function LogementInfo ({logement}){
@@ -12,8 +12,8 @@ function LogementInfo ({logement}){
           <h1 className="logement-name">{logement.title}</h1>
           <span className="logement-location"> </span>
           <div className="logement-tags">
-              {logement.tags.map((tag) => (
-                    <div className="tag">{tag}</div>
+              {logement.tags.map((tag, index) => (
+                    <div className="tag" key={index}>{tag}</div>
                 ))}
           </div>
         </div>
@@ -41,7 +41,7 @@ function LogementInfo ({logement}){
       <div className="info-main-container">
         <div className="left-main">
 
-          <Collapse title="Description" content={logement.description} />
+          <Collapse title="Description" content={<p>{logement.description}</p>} />
 
         </div>
 
@@ -49,8 +49,8 @@ function LogementInfo ({logement}){
         
         <Collapse title="Équipements" content={
           <ul className="equipments">
-            {logement.equipments.map((equipment) => (
-              <li>{equipment}</li>
+            {logement.equipments.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
             ))}
           </ul>
         } />

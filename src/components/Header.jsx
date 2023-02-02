@@ -1,25 +1,36 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from '../img/LOGO.png'
 
 
 function Header() {
+
+  let activeStyle = {
+    textDecoration: "underline",
+  };
+
+  
   return (
+
     <header>
     <div className="header-container">
       <div className="logo-container">
-        <Link to={'/'}>
+        <NavLink to='/'>
           <img src={logo} alt="" srcSet="" />
-        </Link>
+        </NavLink>
       </div>
 
       <div className="nav-container">
         <nav>
         <ul>
           <li>
-            <Link to={`/`}>Accueil</Link>
+            <NavLink to='/' style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }>Accueil</NavLink>
           </li>
           <li>
-            <Link to={`/about`}>A Propos</Link>
+            <NavLink to='/about' style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }>A Propos</NavLink>
           </li>
         </ul>
         </nav>
