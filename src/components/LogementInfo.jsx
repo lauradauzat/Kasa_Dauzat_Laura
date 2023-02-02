@@ -3,7 +3,9 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 import Collapse from './Collapse';
 
 function LogementInfo ({logement}){
-  console.log('logement' + logement.title);
+
+  const [firstname, surname] = logement.host.name.split(" ");
+
     return (
         <>  
            <div className="info-container">
@@ -20,7 +22,7 @@ function LogementInfo ({logement}){
 
         <div className="right-info">
           <div className="logement-proprio">
-            <span className="proprio-name">{logement.host.name}</span>
+            <span className="proprio-name"> {firstname} <br /> {surname}</span>
             <div className="proprio-img-container" style={{backgroundImage: `url(${logement.host.picture})`}}></div>
           </div>
           <div className="rating">
