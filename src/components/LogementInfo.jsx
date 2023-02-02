@@ -1,66 +1,60 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import Collapse from './Collapse';
 
-
-function LogementInfo () {
+function LogementInfo ({logement}){
+  console.log('logement' + logement.title);
     return (
         <>  
            <div className="info-container">
       <div className="info-header-container">
         <div className="left-info">
-          <h1 className="logement-name">Cozy loft on the Canal Saint-Martin</h1>
-          <span className="logement-location"> Paris, Île-de-Fance</span>
+          <h1 className="logement-name">{logement.title}</h1>
+          <span className="logement-location"> </span>
           <div className="logement-tags">
-            <div className="tag">
-              Cozy
-            </div>
-            <div className="tag">
-              Canal
-            </div>
-            <div className="tag">
-              Paris 10
-            </div>
+              {logement.tags.map((tag) => (
+                    <div className="tag">{tag}</div>
+                ))}
           </div>
         </div>
 
         <div className="right-info">
           <div className="logement-proprio">
-            <span className="proprio-name">Alexandre <br /> Dumas</span>
-            <div className="proprio-img-container"></div>
+            <span className="proprio-name">{logement.host.name}</span>
+            <div className="proprio-img-container" style={{backgroundImage: `url(${logement.host.picture})`}}></div>
           </div>
           <div className="rating">
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
+              {Array.from({ length: 5 }, (_, i) => (
+              <FontAwesomeIcon
+                key={i}
+                icon={faStar}
+                style={{
+                  color: i < logement.rating ? '#FF6060' : '#E3E3E3',
+                  fontSize: '30px',
+                }}
+              />
+            ))}
           </div>
         </div>
       </div>
 
       <div className="info-main-container">
         <div className="left-main">
-          <div className="toggle-container">
-            <h2>Description    <FontAwesomeIcon icon={faChevronDown} /></h2>
-            <div className="toggle-content">
-              <p>
-                Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à1 station de la gare de l'est (7 minutes à pied).
-              </p>
-            </div>
-          </div>
+
+          <Collapse title="Description" content={logement.description} />
+
         </div>
 
         <div className="right-main">
-          <div className="toggle-container">
-            <h2>Équipements  <FontAwesomeIcon icon={faChevronDown} /></h2>
-            <div className="toggle-content">
-              <li className="equipements">
-                <ul>Climatisation</ul>
-                <ul>Wi-fi</ul>
-                <ul>Cuisine</ul>
-              </li>
-            </div>
-          </div>
+        
+        <Collapse title="Équipements" content={
+          <ul className="equipments">
+            {logement.equipments.map((equipment) => (
+              <li>{equipment}</li>
+            ))}
+          </ul>
+        } />
+
         </div>
       </div>
     </div>

@@ -129,14 +129,14 @@ cursor: pointer;
     padding: 20px; 
   }
   
-  .toggle-container i {
+  .toggle-container svg {
     position: absolute;
     right: 30px;
     top: 25px;
     transition: transform 0.3s;
   }
   
-  .toggle-container i.open {
+  .toggle-container svg.open {
     transform: rotate(180deg); 
   }
   
@@ -300,6 +300,8 @@ span.proprio-name {
   height: 64px;
   background-color:#C4C4C4;
   margin-left: 20px;
+  background-position: center;
+    background-size: cover;
 }
 
 li.equipements {
@@ -314,14 +316,7 @@ padding: 0px;
   display: flex;
 }
 
-.rating i {
-  font-size: 30px;
-  color: #E3E3E3;
-}
 
-.rating i:nth-child(-n+3) {
-  color: #FF6060;
-}
 
 
 .info-main-container {
@@ -449,7 +444,7 @@ footer {
   border-radius: 5px;
 }
 
-.toggle-container i {
+.toggle-container svg {
   top: 13px;
 }
 

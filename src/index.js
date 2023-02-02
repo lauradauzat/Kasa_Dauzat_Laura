@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
   createBrowserRouter,
-  RouterProvider
+  RouterProvider,
+  useParams
 } from "react-router-dom";
 
 //import { BrowserRouter } from "react-router-dom"
@@ -23,6 +24,7 @@ import Footer from './components/Footer';
 
 
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,7 +32,7 @@ const router = createBrowserRouter([
     errorElement: <Error />,
   },
   {
-    path: "logement",
+    path: "logement/:id",
     element: <Logement />,
   },
   {
