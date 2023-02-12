@@ -1,5 +1,5 @@
-import Header from './Header'
-import Collapse from './Collapse';
+
+import Collapse from '../components/Collapse';
 
 
 function About() {

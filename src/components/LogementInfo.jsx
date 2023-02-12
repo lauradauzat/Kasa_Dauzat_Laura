@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import Collapse from './Collapse';
+import Tag from './Tag';
 
 function LogementInfo ({logement}){
 
@@ -15,7 +16,7 @@ function LogementInfo ({logement}){
           <span className="logement-location"> </span>
           <div className="logement-tags">
               {logement.tags.map((tag, index) => (
-                    <div className="tag" key={index}>{tag}</div>
+                     <Tag key={index} tag={tag} />
                 ))}
           </div>
         </div>

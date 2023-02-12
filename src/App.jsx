@@ -1,50 +1,35 @@
-import React from 'react';
-
-import {
-  Route,
-  RouterProvider, Routes
-} from "react-router-dom";
-
-
+import React, { useEffect, useState } from 'react';
 
 import './index.css';
 import './App.css';
 
-
 import Footer from './components/Footer';
-import router from './components/Router';
-import Logement from './components/Logement';
-import Home from './components/Home';
-import About from './components/About';
 import Header from './components/Header';
-import Error from './components/Error';
-import data from '../src/logements.json'
+import Router from './Router';
 
 
 
 
 function App() {
 
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch('/publiclogements.json');
+      const json = await response.json();
+      setData(json);
+    }
+    fetchData();
+  }, []);
 
   return (
     
     //Initial Content
     <div className="App">
         <>       
-      {/*      
-        <RouterProvider  router={router}>
-        </RouterProvider> */}
-
         <Header />         
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="logement/:id" element={<Logement />} />
-          <Route path="/about" element={<About />}  />
-          <Route path="/*" element={<Error />} />
-
-        </Routes>
-      
+        <Router data={data} />
         <Footer />
         </>
         

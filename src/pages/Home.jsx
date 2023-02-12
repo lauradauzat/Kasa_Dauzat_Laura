@@ -1,13 +1,14 @@
-import Header from './Header'
-import CardContainer from "./CardContainer"; 
+
+import CardContainer from "../components/CardContainer"; 
 
 
-function Home () {
+function Home ({data}) {
+
     return (
         <>
          
           <div className="caroussel about"></div>
-          <CardContainer/>
+          <CardContainer data={data} />
 
         </>
     )

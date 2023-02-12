@@ -1,14 +1,15 @@
+import { NavLink } from "react-router-dom";
 
 
-const Card = ({id, title, cover}) => {
+function Card({data}) {
     return (
-        <div className="card" id={id} style={{backgroundImage: `url(${cover})`}} onClick={() => window.location.href = `/logement/${id}`}>
+        <NavLink className="card" id={data.id} style={{backgroundImage: `url(${data.cover})`}} to={`/logement/${data.id}`}>
             <div className="card-text-container">
                 <div className="card-text">
-                    <p>{title}</p>
+                    <p>{data.title}</p>
                 </div>
             </div>
-        </div>
+        </NavLink>
     )
 }
 
