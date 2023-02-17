@@ -7,7 +7,7 @@ function Home ({data}) {
     return (
         <>
          
-          <div className="caroussel about"></div>
+          <div className="caroussel home"></div>
           <CardContainer data={data} />
 
         </>

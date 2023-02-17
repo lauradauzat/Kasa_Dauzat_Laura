@@ -75,7 +75,7 @@ cursor: pointer;
 
  .caroussel.home {
   height:223px; 
-  background-image: url(img/IMG.png);
+  background-image: url(/src/img/headermenu.png);
 }
 
 .caroussel.home p {
